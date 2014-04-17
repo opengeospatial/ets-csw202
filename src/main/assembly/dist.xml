@@ -3,46 +3,30 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 
 	                    http://maven.apache.org/xsd/assembly-1.1.2.xsd">
-  <id>ctl-script</id>
+  <id>dist</id>
   <formats>
     <format>zip</format>
   </formats>
-  <includeBaseDirectory>false</includeBaseDirectory>
+  <includeBaseDirectory>true</includeBaseDirectory>
+  <baseDirectory>${ets-code}/${spec-version}</baseDirectory>
   <includeSiteDirectory>true</includeSiteDirectory>
   <fileSets>
-   <fileSet>
-      <directory>${project.basedir}/src/main/config</directory>
-      <outputDirectory>${artifactId}</outputDirectory>
-      <includes>
-      <include>config.xml</include>
-      </includes>
-     </fileSet>
-     
-      <fileSet>
+    <fileSet>
       <directory>${project.basedir}/src/main/scripts/ctl</directory>
-      <outputDirectory>${artifactId}/ctl</outputDirectory>
-     </fileSet>
-     
-      <fileSet>
-      <directory>${project.basedir}/src/main/resources/data</directory>
-      <outputDirectory>${artifactId}/data</outputDirectory>
-     </fileSet>
-     
-      <fileSet>
+      <outputDirectory>ctl</outputDirectory>
+    </fileSet>
+    <fileSet>
       <directory>${project.basedir}/src/main/resources</directory>
-      <outputDirectory>${artifactId}/resources</outputDirectory>
-       <excludes>
+      <outputDirectory>resources</outputDirectory>
+      <excludes>
         <exclude>data/</exclude>
       </excludes>
-     </fileSet>
-     
-      <fileSet>
-          <includes>
-            <include>README*</include>
-            <include>LICENSE*</include>
-            <include>NOTICE*</include>
-          </includes>
-        </fileSet>
-  
-    </fileSets>
+    </fileSet>
+  </fileSets>
+  <files>
+    <file>
+      <source>${project.basedir}/src/main/config/config.xml</source>
+      <filtered>true</filtered>
+    </file>
+  </files>
 </assembly>

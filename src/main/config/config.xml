@@ -5,21 +5,21 @@
   <standard>
     <name>Catalogue Service - Web (CSW)</name>
     <version>
-      <name>2.0.2</name>
+      <name>${spec-version}</name>
       <suite>
         <namespace-uri>http://www.opengis.net/cat/csw/2.0.2</namespace-uri>
         <prefix>csw</prefix>
-        <local-name>csw-2.0.2-compliance-suite</local-name>
-        <title>CSW 2.0.2 Conformance Test Suite</title>
+        <local-name>csw-${spec-version}-compliance-suite</local-name>
+        <title>CSW ${spec-version} Conformance Test Suite</title>
         <description>Checks catalogue implementations for conformance to the CSW part of OGC 07-006r1.</description>
       </suite>
       <revision>
-        <name>r11</name>
+        <name>${version}</name>
         <sources>
-          <source>csw/2.0.2/src</source>
+          <source>${ets-code}/${spec-version}/ctl</source>
         </sources>
-        <resources>csw/2.0.2/resources</resources>
-        <webdir>csw/2.0.2/web</webdir>
+        <resources>${ets-code}/${spec-version}/resources</resources>
+        <webdir>${ets-code}/${spec-version}/site</webdir>
       </revision>
     </version>
   </standard>
