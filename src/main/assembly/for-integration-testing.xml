@@ -4,42 +4,32 @@
     xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 
 	                    http://maven.apache.org/xsd/assembly-1.1.2.xsd">
   <id>for-integration-testing</id>
-  
-  
   <formats>
     <format>dir</format>
   </formats>
   <includeBaseDirectory>false</includeBaseDirectory>
-  
 
   <fileSets>
-  
-   <fileSet>
+    <fileSet>
       <directory>${project.basedir}/src/main/config</directory>
       <outputDirectory>TE_BASE/scripts/${artifactId}</outputDirectory>
       <includes>
-      <include>config.xml</include>
+        <include>config.xml</include>
       </includes>
-     </fileSet>
-     
-      <fileSet>
+    </fileSet>
+
+    <fileSet>
       <directory>${project.basedir}/src/main/scripts/ctl</directory>
       <outputDirectory>TE_BASE/scripts/${artifactId}/ctl</outputDirectory>
-     </fileSet>
-     
-      <fileSet>
-      <directory>${project.basedir}/src/main/resources/data</directory>
-      <outputDirectory>TE_BASE/scripts/${artifactId}/data</outputDirectory>
-     </fileSet>
-     
-      <fileSet>
+    </fileSet>
+
+    <fileSet>
       <directory>${project.basedir}/src/main/resources</directory>
       <outputDirectory>TE_BASE/scripts/${artifactId}/resources</outputDirectory>
-       <excludes>
+      <excludes>
         <exclude>data/</exclude>
       </excludes>
-     </fileSet>
-     
-  
-    </fileSets>
+    </fileSet>
+  </fileSets>
+
 </assembly>
