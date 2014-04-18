@@ -12,7 +12,7 @@
   <fileSets>
     <fileSet>
       <directory>${project.basedir}/src/main/config</directory>
-      <outputDirectory>TE_BASE/scripts/${artifactId}</outputDirectory>
+      <outputDirectory>TE_BASE/scripts/${project.properties.ets-code}/${project.properties.spec-version}</outputDirectory>
       <includes>
         <include>config.xml</include>
       </includes>
@@ -20,12 +20,12 @@
 
     <fileSet>
       <directory>${project.basedir}/src/main/scripts/ctl</directory>
-      <outputDirectory>TE_BASE/scripts/${artifactId}/ctl</outputDirectory>
+      <outputDirectory>TE_BASE/scripts/${project.properties.ets-code}/${project.properties.spec-version}/ctl</outputDirectory>
     </fileSet>
 
     <fileSet>
       <directory>${project.basedir}/src/main/resources</directory>
-      <outputDirectory>TE_BASE/scripts/${artifactId}/resources</outputDirectory>
+      <outputDirectory>TE_BASE/scripts/${project.properties.ets-code}/${project.properties.spec-version}/resources</outputDirectory>
       <excludes>
         <exclude>data/</exclude>
       </excludes>

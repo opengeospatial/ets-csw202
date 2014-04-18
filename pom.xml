@@ -125,7 +125,7 @@
     <dependency>
       <groupId>org.opengis.cite.teamengine</groupId>
       <artifactId>teamengine-core</artifactId>
-      <version>4.0.6-SNAPSHOT</version>
+      <version>4.0.5</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -135,4 +135,17 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  
+   <repositories>
+    <repository>
+      <!-- Allows public read-only access -->
+      <id>opengeospatial-cite</id>
+      <name>OGC CITE Repository</name>
+      <url>https://svn.opengeospatial.org/ogc-projects/cite/maven</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+  
 </project>

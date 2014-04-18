@@ -38,7 +38,7 @@ public class ITSuite {
         System.out.println("path of class " + f.getParent());
         // String teb =
         // Misc.getResourceAsFile("target/csw-20-r10/TE_BASE").getCanonicalPath();
-        String tebase = target + "/csw-2.0-r10/TE_BASE/";
+        String tebase = target + "/ets-csw-2.0.2-r11-SNAPSHOT/TE_BASE";
         System.out.println("TE_BASE is at " + tebase);
         System.setProperty("TE_BASE", tebase);
         String[] testRunArgs = new String[] { "-source=csw/2.0.2/ctl/main.xml" };
