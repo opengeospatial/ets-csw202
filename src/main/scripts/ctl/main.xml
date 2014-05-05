@@ -27,50 +27,41 @@
     <ctl:link>data/data-csw-2.0.2.zip</ctl:link>
     <ctl:link>docs/csw/2.0.2/</ctl:link>
     <ctl:starting-test>csw:Main</ctl:starting-test>
+    <ctl:form height="600" width="800">
+      <div id="input-form" xmlns="http://www.w3.org/1999/xhtml">
+        <h2>CSW Catalogue 2.0.2 - Test setup</h2>
+        <h3>Service metadata</h3>
+        <p>Please provide a URL from which a capabilities document for the CSW 
+        implementation under test can be retrieved (this can refer to a static 
+        document or to a service endpoint).</p>
+        <br />
+        <table border="2" padding="4" bgcolor="#00ffff">
+          <tr>
+            <td align="left">Capabilities URL</td>
+            <td align="center">
+              <input name="capabilities.url" size="128" 
+                                 type="text" value="http://"/>
+            </td>
+          </tr>
+        </table>
+        <p>
+          <div bgcolor="#ffffcc"><strong>WARNING: </strong> Don't forget to add the test data!</div>
+        </p>
+        <br />
+        <input type="submit" value="Start"/>
+      </div>
+    </ctl:form>
   </ctl:suite>
 
   <ctl:test name="csw:Main">
+    <ctl:param name="capabilities.url"/>
     <ctl:assertion>The implementation under test minimally conforms to the CSW 
       part (Clause 10) of Catalogue 2.0.2 (OGC 07-006r1).</ctl:assertion>
-    <ctl:code>         
-      <xsl:variable name="form-values">
-        <ctl:form height="600" width="800">
-          <div id="input-form" xmlns="http://www.w3.org/1999/xhtml">
-            <h2>CSW Catalogue 2.0.2 - Test setup</h2>
-            <h3>Service metadata</h3>
-            <p>
-                  Please provide a URL from which a capabilities document for 
-                  the CSW implementation under test can be retrieved (this can 
-                  refer to a static document or to a service endpoint).
-            </p>
-            <br />
-            <table border="2" padding="4" bgcolor="#00ffff">
-              <tr>
-                <td align="left">Capabilities URL</td>
-                <td align="center">
-                  <input name="capabilities.url" size="128" 
-                                 type="text" value="http://"/>
-                </td>
-              </tr>
-            </table>
-            <p>
-              <div bgcolor="#ffffcc"><strong>WARNING: </strong> Don't forget to add the test data!</div>
-            </p>
-            <br />
-            <input type="submit" value="Start"/>
-          </div>
-        </ctl:form>
-      </xsl:variable>
-
-      <!-- Populate global variables from form data -->
-      <xsl:variable name="csw.capabilities.url" 
-                      select="$form-values/values/value[@key='capabilities.url']"/>
-
-      <!-- Attempt to retrieve capabilities document -->
+    <ctl:code>
       <xsl:variable name="csw.capabilities.doc">
         <ctl:request>
           <ctl:url>
-            <xsl:value-of select="$csw.capabilities.url"/>
+            <xsl:value-of select="$capabilities.url"/>
           </ctl:url>
           <ctl:method>GET</ctl:method>
         </ctl:request>
