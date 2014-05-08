@@ -25,7 +25,7 @@
   </scm>
   <issueManagement>
     <system>GitHub Issue Tracker</system>
-    <url>http://www.sourceforge.net/p/teamengine/_list/tickets</url>
+    <url>https://github.com/opengeospatial/ets-csw202/issues</url>
   </issueManagement>
 
   <properties>
@@ -85,7 +85,7 @@
         <configuration>
           <appendAssemblyId>false</appendAssemblyId>
           <descriptors>
-            <descriptor>${basedir}/src/main/assembly/dist.xml</descriptor>
+            <descriptor>${basedir}/src/assembly/dist.xml</descriptor>
           </descriptors>
         </configuration>
         <executions>
@@ -117,6 +117,10 @@
             <version>1.5</version>
           </dependency>
         </dependencies>
+        <configuration>
+          <relativizeDecorationLinks>false</relativizeDecorationLinks>
+          <generateReports>false</generateReports>
+        </configuration>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
