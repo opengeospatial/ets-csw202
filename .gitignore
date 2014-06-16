@@ -8,3 +8,8 @@ target/
 pom.xml.releaseBackup
 release.properties
 /target
+
+# GIT
+.DS_Store
+
+
