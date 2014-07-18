@@ -13,12 +13,27 @@ Detailed information about this test suite is available at src/site/markdown/ind
 
 ## Building
 
-This test is build using [Apache Maven](http://maven.apache.org/) To 
-build the tes-suite run maven from the ```src``` directory.
+This test is build using [Apache Maven](http://maven.apache.org/). Process:
+
+Clone this repository:
+```     
+% git clone https://github.com/opengeospatial/$artifactId.git
+```
+Update information about the URL to be tested
+
+open this file:
+
+     ets-csw202/src/test/resources/integration-test.properties
+     
+write the correct URL:
+```
+capabilities.url = http:yourServer?request=GetCapabilities&service=CSW&version=2.0.2
+```
+
+run maven test
 
 ```
-     % mvn site 
-     % mvn install
+% mvn test
 ```
 
 You can learn more about running tests in TEAM Engine at the [CITE wiki](http://cite.opengeospatial.org/easytesting).
