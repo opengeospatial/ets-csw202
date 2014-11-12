@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <artifactId>ets-csw20</artifactId>
   <groupId>org.opengis.cite</groupId>
-  <version>r-SNAPSHOT</version>
+  <version>r10</version>
 
   <name>Conformance Test Suite - CSW 2.0.2</name>
   <description>
