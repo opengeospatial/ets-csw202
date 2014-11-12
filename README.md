@@ -13,6 +13,10 @@ Detailed information about this test suite is available at src/site/markdown/ind
 
 ## Building
 
+There are two options to build and run this test.
+
+### 1. Configure a properties file and run using maven
+
 This test is build using [Apache Maven](http://maven.apache.org/). Process:
 
 Clone this repository:
@@ -36,7 +40,9 @@ run maven test
 % mvn test
 ```
 
-You can learn more about running tests in TEAM Engine at the [CITE wiki](http://cite.opengeospatial.org/easytesting).
+### 2. Run it within TEAM ENGINE
+Follow the [TEAM ENGINE instructions](http://opengeospatial.github.io/teamengine/installation.html) to install and run the tests in TEAM ENGINE.     
+
 
 ## Bugs
 
