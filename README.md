@@ -1,10 +1,10 @@
-# OGC CSW 2.0 Test-Suite
+# OGC Catalog Service for the Web (CSW) 2.0 Test-Suite
 
-GC CSW 2.0 Test-Suite provides the Executable Test Script (ETS) to test implementations   against the following specification(s):
+OGC CSW 2.0 Test-Suite provides the Executable Test Script (ETS) to test implementations against the following specification(s):
 
 - OGC Catalogue Services Specification 2.0.2, [OGC 07-006r1](http://portal.opengeospatial.org/files/?artifact_id=20555)
 
-Detailed information about this test suite is available at src/site/markdown/index.md
+Detailed information about this test suite is available [here](http://opengeospatial.github.io/ets-csw202/)
 
 
 ## License
