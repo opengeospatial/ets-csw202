@@ -21,20 +21,20 @@ This test is build using [Apache Maven](http://maven.apache.org/). Process:
 
 Clone this repository:
 ```     
-% git clone https://github.com/opengeospatial/$artifactId.git
+% git clone https://github.com/opengeospatial/ets-csw202.git
 ```
 Update information about the URL to be tested
 
 open this file:
 
-     ets-csw202/src/test/resources/integration-test.properties
+     ets-csw202/src/test/resources/sut.properties
      
 write the correct URL:
 ```
-capabilities.url = http:yourServer?request=GetCapabilities&service=CSW&version=2.0.2
+capabilities.url = http://[yourServerURL]?request=GetCapabilities&service=CSW&version=2.0.2
 ```
 
-run maven test
+run maven test (note: if the build fails, check into [this](https://github.com/opengeospatial/ets-csw202/issues/5))
 
 ```
 % mvn test
