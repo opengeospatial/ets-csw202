@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <artifactId>ets-csw20</artifactId>
   <groupId>org.opengis.cite</groupId>
-  <version>r11-SNAPSHOT</version>
+  <version>11-SNAPSHOT</version>
 
   <name>Conformance Test Suite - CSW 2.0.2</name>
   <description>
@@ -32,7 +32,7 @@
     <ets-code>csw</ets-code>
     <spec-version>2.0.2</spec-version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <teamengine.version>4.0.5</teamengine.version>
+    <teamengine.version>4.0.6</teamengine.version>
   </properties>
 
   <build>
@@ -67,12 +67,12 @@
         </plugin>
       </plugins>
     </pluginManagement>
-    
+
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
-        <version>2.4</version>
+        <version>2.5</version>
         <executions>
           <execution>
             <id>default-jar</id>
@@ -83,6 +83,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-assembly-plugin</artifactId>
+        <version>2.5.2</version>
         <configuration>
           <descriptors>
             <descriptor>src/assembly/ctl.xml</descriptor>
@@ -100,7 +101,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-site-plugin</artifactId>
-        <version>3.3</version>
+        <version>3.4</version>
         <executions>
           <execution>
             <id>site-package</id>
@@ -114,7 +115,7 @@
           <dependency>
             <groupId>org.apache.maven.doxia</groupId>
             <artifactId>doxia-module-markdown</artifactId>
-            <version>1.5</version>
+            <version>1.6</version>
           </dependency>
         </dependencies>
         <configuration>
@@ -125,7 +126,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.17</version>
+        <version>2.18</version>
         <configuration>
           <includes>
             <include>**/Verify*.java</include>
@@ -137,7 +138,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.1</version>
+        <version>3.2</version>
         <configuration>
           <source>1.7</source>
           <target>1.7</target>
@@ -163,7 +164,7 @@
         </executions>
       </plugin>
     </plugins>
-    
+
     <testResources>
       <testResource>
         <directory>${basedir}/src/test/resources</directory>
@@ -191,13 +192,6 @@
     </plugins>
   </reporting>
 
-  <distributionManagement>
-    <site>
-      <id>website</id>
-      <url>http://myhome</url>
-    </site>
-  </distributionManagement>
-
   <dependencies>
     <dependency>
       <groupId>org.opengis.cite.teamengine</groupId>
@@ -208,21 +202,9 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
+      <version>4.12</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
-
-  <repositories>
-    <repository>
-      <!-- Allows public read-only access -->
-      <id>opengeospatial-cite</id>
-      <name>OGC CITE Repository</name>
-      <url>https://svn.opengeospatial.org/ogc-projects/cite/maven</url>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
-  </repositories>
 
 </project>
