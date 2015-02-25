@@ -83,7 +83,7 @@
 		</assertion>
 		<comment>Pass if the response is schema valid and has no missing elements.</comment>
 		<link>OGC 05-008c1, §7.1 (p.10), §7.4.2 (p.19)</link>
-		<!-- original code (pre-fixing) -->
+		<!-- original code (fixing follows) -->
 		<code>
 			<xsl:variable name="response">
 				<request>
@@ -112,12 +112,7 @@
 				</xsl:otherwise>
 			</xsl:choose>
 		</code>
-		<!-- <code>
-			should implement the following:
-			1-prune the content of extendedCapabilities 
-				(may be empty) and validate the document with the official schemas
-			2-if the content of extendedCapabilities is not empty, validate the whole document 
-				using the user-specified location hints
+<!-- 		<code>
 			<xsl:variable name="response">
 				<request>
 					<url>
