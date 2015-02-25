@@ -54,9 +54,8 @@
 					<ctlp:schema type="resource">xsd/ogc/csw/2.0.2/csw-2.0.2.xsd</ctlp:schema>
 				</ctlp:schemas>
 			</ctl:with-param>
-	</ctl:call-test>
-    -->
-  <ctl:test name="ctl:XMLValidatingParser">
+	</ctl:call-test> -->
+    <ctl:test name="ctl:XMLValidatingParser">
     <ctl:param name="doc"/>
     <ctl:param name="instruction"/>
     <ctl:assertion>Validates the XML instance against the set of XML Schemas specified using the given instruction parameter.</ctl:assertion>

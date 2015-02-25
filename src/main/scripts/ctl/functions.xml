@@ -21,7 +21,7 @@
     <ctl:param name="doc"/>
     <ctl:param name="schema"/>
     <ctl:param name="phase"/>
-    <ctl:description>Invokes the Schematon validator.</ctl:description>
+    <ctl:description>Invokes the Schematron validator.</ctl:description>
     <ctl:java class="com.occamlab.te.parsers.SchematronValidatingParser" 
                   method="checkSchematronRules" 
                   initialized="true"/>
@@ -42,7 +42,7 @@
     <ctl:param name="schema"/>
     <ctl:param name="phase"/>
     <ctl:return>A list of errors (NodeList of "error" elements).</ctl:return>
-    <ctl:description>Invokes the Schematon validator.</ctl:description>
+    <ctl:description>Invokes the Schematron validator.</ctl:description>
     <ctl:java class="com.occamlab.te.parsers.SchematronValidatingParser" 
                   method="validate" 
                   initialized="true"/>
