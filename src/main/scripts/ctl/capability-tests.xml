@@ -26,7 +26,7 @@
           <ctl:call-test name="csw:GetCapabilities-GET">
             <ctl:with-param name="csw.capabilities.doc" select="$csw.capabilities.doc"/>
           </ctl:call-test>
-          <ctl:call-test name="csw:DescribeRecord-POST">
+          <!-- <ctl:call-test name="csw:DescribeRecord-POST">
             <ctl:with-param name="csw.capabilities.doc" select="$csw.capabilities.doc"/>
           </ctl:call-test>
           <ctl:call-test name="csw:GetRecordById-GET">
@@ -34,7 +34,7 @@
           </ctl:call-test>
           <ctl:call-test name="csw:GetRecords-POST">
             <ctl:with-param name="csw.capabilities.doc" select="$csw.capabilities.doc"/>
-          </ctl:call-test>
+          </ctl:call-test> -->
       </ctl:code>
    </ctl:test>
 </ctl:package>
