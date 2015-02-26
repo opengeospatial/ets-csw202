@@ -4,86 +4,68 @@
 	xmlns:p="http://teamengine.sourceforge.net/parsers" xmlns:saxon="http://saxon.sf.net/"
 	xmlns:csw="http://www.opengis.net/cat/csw/2.0.2" xmlns:xi="http://www.w3.org/2001/XInclude">
 
-	<ctl:test name="csw:GetCapabilities-GET">
-		<param name="csw.capabilities.doc" />
-		<ctl:assertion>
-			Run test group for GetCapabilities requests using the GET method.
-		</ctl:assertion>
-		<ctl:code>
-			<xsl:variable name="csw.GetCapabilities.get.url">
-				<xsl:value-of
-					select="$csw.capabilities.doc//ows:OperationsMetadata/ows:Operation[@name='GetCapabilities']/ows:DCP/ows:HTTP/ows:Get/@xlink:href" />
-			</xsl:variable>
-			<ctl:message>
-				Target endpoint is
-				<xsl:value-of select="$csw.GetCapabilities.get.url" />
-			</ctl:message>
-
-			<ctl:call-test name="csw:csw-2.0.2-GetCapabilities-tc1.1">
-				<ctl:with-param name="csw.GetCapabilities.get.url"
-					select="$csw.GetCapabilities.get.url" />
-			</ctl:call-test>
-			<!-- excluded for fixing #2 -->
-			<ctl:call-test name="csw:csw-2.0.2-GetCapabilities-tc1.2">
-				<ctl:with-param name="csw.GetCapabilities.get.url"
-					select="$csw.GetCapabilities.get.url" />
-			</ctl:call-test>
-			<ctl:call-test name="csw:csw-2.0.2-GetCapabilities-tc1.3">
-				<ctl:with-param name="csw.GetCapabilities.get.url"
-					select="$csw.GetCapabilities.get.url" />
-			</ctl:call-test>
-			<ctl:call-test name="csw:csw-2.0.2-GetCapabilities-tc2.1">
-				<ctl:with-param name="csw.GetCapabilities.get.url"
-					select="$csw.GetCapabilities.get.url" />
-			</ctl:call-test>
-			<ctl:call-test name="csw:csw-2.0.2-GetCapabilities-tc3.1">
-				<ctl:with-param name="csw.GetCapabilities.get.url"
-					select="$csw.GetCapabilities.get.url" />
-			</ctl:call-test>
-			<ctl:call-test name="csw:csw-2.0.2-GetCapabilities-tc4.1">
-				<ctl:with-param name="csw.GetCapabilities.get.url"
-					select="$csw.GetCapabilities.get.url" />
-			</ctl:call-test>
-			<ctl:call-test name="csw:csw-2.0.2-GetCapabilities-tc5.1">
-				<ctl:with-param name="csw.GetCapabilities.get.url"
-					select="$csw.GetCapabilities.get.url" />
-			</ctl:call-test>
-			<ctl:call-test name="csw:csw-2.0.2-GetCapabilities-tc5.2">
-				<ctl:with-param name="csw.GetCapabilities.get.url"
-					select="$csw.GetCapabilities.get.url" />
-			</ctl:call-test>
-			<ctl:call-test name="csw:csw-2.0.2-GetCapabilities-tc6.1">
-				<ctl:with-param name="csw.GetCapabilities.get.url"
-					select="$csw.GetCapabilities.get.url" />
-			</ctl:call-test>
-			<ctl:call-test name="csw:csw-2.0.2-GetCapabilities-tc7.1">
-				<ctl:with-param name="csw.GetCapabilities.get.url"
-					select="$csw.GetCapabilities.get.url" />
-			</ctl:call-test>
-			<ctl:call-test name="csw:csw-2.0.2-GetCapabilities-tc7.2">
-				<ctl:with-param name="csw.GetCapabilities.get.url"
-					select="$csw.GetCapabilities.get.url" />
-			</ctl:call-test>
-			<ctl:call-test name="csw:csw-2.0.2-GetCapabilities-tc8.1">
-				<ctl:with-param name="csw.GetCapabilities.get.url"
-					select="$csw.GetCapabilities.get.url" />
-				<ctl:with-param name="csw.GetCapabilities.formats"
-					select="$csw.capabilities.doc//ows:Operation[@name='GetCapabilities']/ows:Parameter[lower-case(@name)='acceptformats']" />
-			</ctl:call-test>
-		</ctl:code>
-	</ctl:test>
-
-	<test name="csw:csw-2.0.2-GetCapabilities-tc1.1">
-		<param name="csw.GetCapabilities.get.url" />
-		<assertion>
-			All OGC web services must implement GetCapabilities using the GET method.
-			The response to a GetCapabilities request without the optional version
-			parameter must include a complete representation of the capabilities
-			document corresponding to the latest supported version.
-		</assertion>
-		<comment>Pass if the response is schema valid and has no missing elements.</comment>
-		<link>OGC 05-008c1, §7.1 (p.10), §7.4.2 (p.19)</link>
-		<!-- original code (fixing follows) -->
+    <ctl:test name="csw:GetCapabilities-GET">
+      <param name="csw.capabilities.doc" />
+      <ctl:assertion>
+      Run test group for GetCapabilities requests using the GET method.
+      </ctl:assertion>
+      <ctl:code>
+        <xsl:variable name="csw.GetCapabilities.get.url">
+		    <xsl:value-of select="$csw.capabilities.doc//ows:OperationsMetadata/ows:Operation[@name='GetCapabilities']/ows:DCP/ows:HTTP/ows:Get/@xlink:href"/>
+		</xsl:variable>
+        <ctl:message>Target endpoint is <xsl:value-of select="$csw.GetCapabilities.get.url"/></ctl:message>
+        
+  <ctl:call-test name="csw:csw-2.0.2-GetCapabilities-tc1.1">
+    <ctl:with-param name="csw.GetCapabilities.get.url" select="$csw.GetCapabilities.get.url"/>
+  </ctl:call-test> 
+  <ctl:call-test name="csw:csw-2.0.2-GetCapabilities-tc1.2">
+    <ctl:with-param name="csw.GetCapabilities.get.url" select="$csw.GetCapabilities.get.url"/>
+  </ctl:call-test>
+  <ctl:call-test name="csw:csw-2.0.2-GetCapabilities-tc1.3">
+    <ctl:with-param name="csw.GetCapabilities.get.url" select="$csw.GetCapabilities.get.url"/>
+  </ctl:call-test>
+  <ctl:call-test name="csw:csw-2.0.2-GetCapabilities-tc2.1">
+    <ctl:with-param name="csw.GetCapabilities.get.url" select="$csw.GetCapabilities.get.url"/>
+  </ctl:call-test>
+  <ctl:call-test name="csw:csw-2.0.2-GetCapabilities-tc3.1">
+    <ctl:with-param name="csw.GetCapabilities.get.url" select="$csw.GetCapabilities.get.url"/>
+  </ctl:call-test>
+  <ctl:call-test name="csw:csw-2.0.2-GetCapabilities-tc4.1">
+    <ctl:with-param name="csw.GetCapabilities.get.url" select="$csw.GetCapabilities.get.url"/>
+  </ctl:call-test>
+  <ctl:call-test name="csw:csw-2.0.2-GetCapabilities-tc5.1">
+    <ctl:with-param name="csw.GetCapabilities.get.url" select="$csw.GetCapabilities.get.url"/>
+  </ctl:call-test>
+  <ctl:call-test name="csw:csw-2.0.2-GetCapabilities-tc5.2">
+    <ctl:with-param name="csw.GetCapabilities.get.url" select="$csw.GetCapabilities.get.url"/>
+  </ctl:call-test>
+  <ctl:call-test name="csw:csw-2.0.2-GetCapabilities-tc6.1">
+    <ctl:with-param name="csw.GetCapabilities.get.url" select="$csw.GetCapabilities.get.url"/>
+  </ctl:call-test>
+  <ctl:call-test name="csw:csw-2.0.2-GetCapabilities-tc7.1">
+    <ctl:with-param name="csw.GetCapabilities.get.url" select="$csw.GetCapabilities.get.url"/>
+  </ctl:call-test>
+  <ctl:call-test name="csw:csw-2.0.2-GetCapabilities-tc7.2">
+    <ctl:with-param name="csw.GetCapabilities.get.url" select="$csw.GetCapabilities.get.url"/>
+  </ctl:call-test>
+  <ctl:call-test name="csw:csw-2.0.2-GetCapabilities-tc8.1">
+    <ctl:with-param name="csw.GetCapabilities.get.url" select="$csw.GetCapabilities.get.url"/>
+    <ctl:with-param name="csw.GetCapabilities.formats" 
+      select="$csw.capabilities.doc//ows:Operation[@name='GetCapabilities']/ows:Parameter[lower-case(@name)='acceptformats']"/>
+  </ctl:call-test>
+      </ctl:code>
+    </ctl:test>
+   
+    <test name="csw:csw-2.0.2-GetCapabilities-tc1.1">
+      <param name="csw.GetCapabilities.get.url"/>
+      <assertion>
+      All OGC web services must implement GetCapabilities using the GET method. 
+      The response to a GetCapabilities request without the optional version 
+      parameter must include a complete representation of the capabilities 
+      document corresponding to the latest supported version.
+      </assertion>
+      <comment>Pass if the response is schema valid and has no missing elements.</comment>
+      <link>OGC 05-008c1, §7.1 (p.10), §7.4.2 (p.19)</link>
 		<code>
 			<xsl:variable name="response">
 				<request>
