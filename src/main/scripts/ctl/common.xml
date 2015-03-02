@@ -106,6 +106,30 @@
 			</ctl:code>
 	</ctl:test>	
 	
+	<ctl:test name="ctl:XMLValidatingParser.HINTS">
+			<ctl:param name="doc"/>
+			<ctl:assertion>
+            Validates a given XML document against the SchemaLocation hints specified in the file itself.
+            </ctl:assertion>
+			<ctl:code>
+				<ctl:call-test name="ctl:XMLValidatingParser">
+					<ctl:with-param name="doc"><xsl:copy-of select="$doc"/></ctl:with-param>
+					<ctl:with-param name="instruction">				
+						<ctlp:schemas />
+					</ctl:with-param>
+				</ctl:call-test>
+			</ctl:code>
+	</ctl:test>	
+	
+	<ctl:parser name="p:XMLValidatingParser.HINTS">
+		<ctl:java class="com.occamlab.te.parsers.XMLValidatingParser"
+  				method="parse" initialized="true">
+    		<ctl:with-param name="schemas_links">
+      			<ctlp:schemas />
+    		</ctl:with-param>
+  		</ctl:java>
+	</ctl:parser>
+	
 	<ctl:parser name="p:XMLValidatingParser.CSW">
 		<ctl:java class="com.occamlab.te.parsers.XMLValidatingParser" 
                   method="parse" 
