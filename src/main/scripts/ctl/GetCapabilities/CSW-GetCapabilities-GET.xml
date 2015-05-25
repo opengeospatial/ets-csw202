@@ -31,9 +31,12 @@
 		<assertion>
 			All OGC web services must implement GetCapabilities using the GET
 			method.
-			The response to a GetCapabilities request without the optional version
+			This tests requires version 2.0.2 of the Capabilities, by explicitely
+			setting the 'AcceptVersions' parameter. Note that the response to a 
+			GetCapabilities request without the optional version
 			parameter must include a complete representation of the capabilities
-			document corresponding to the latest supported version.
+			document corresponding to the latest supported version, what could be
+			3.0, or later.
 		</assertion>
 		<comment>Pass if the response is schema valid and has no missing
 			elements.</comment>
@@ -47,6 +50,8 @@
 					<method>GET</method>
 					<param name="service">CSW</param>
 					<param name="request">GetCapabilities</param>
+					<param name="AcceptVersions">2.0.2</param>
+					<!-- <param name="version">2.0.2</param> -->
 				</request>
 			</xsl:variable>
 
