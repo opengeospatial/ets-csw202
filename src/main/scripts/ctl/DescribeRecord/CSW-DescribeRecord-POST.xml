@@ -34,9 +34,11 @@
       <ctl:call-test name="csw:csw-2.0.2-DescribeRecord-tc2.1">
         <ctl:with-param name="csw.DescribeRecord.post.url" select="$csw.DescribeRecord.post.url"/>
       </ctl:call-test>
+      <!--  
       <ctl:call-test name="csw:csw-2.0.2-DescribeRecord-tc3.1">
         <ctl:with-param name="csw.DescribeRecord.post.url" select="$csw.DescribeRecord.post.url"/>
       </ctl:call-test>
+      -->
       <ctl:call-test name="csw:csw-2.0.2-DescribeRecord-tc4.1">
         <ctl:with-param name="csw.DescribeRecord.post.url" select="$csw.DescribeRecord.post.url"/>
       </ctl:call-test>
