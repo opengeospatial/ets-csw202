@@ -143,7 +143,8 @@
     </ctl:code>
   </ctl:test>
 
-  <ctl:test name="csw:csw-2.0.2-DescribeRecord-tc3.1">
+  <!-- commented out to (re)apply the fix of #902; this was committed in r11, but for some reasons the commit got lost -->
+  <!-- <ctl:test name="csw:csw-2.0.2-DescribeRecord-tc3.1">
     <ctl:param name="csw.DescribeRecord.post.url"/>
     <ctl:assertion>
       The response to a DescribeRecord request that contains an unknown TypeName 
@@ -183,7 +184,7 @@
         </xsl:otherwise>
       </xsl:choose>
     </ctl:code>
-  </ctl:test>
+  </ctl:test> -->
 
   <ctl:test name="csw:csw-2.0.2-DescribeRecord-tc4.1">
     <ctl:param name="csw.DescribeRecord.post.url"/>
