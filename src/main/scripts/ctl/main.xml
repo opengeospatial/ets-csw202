@@ -29,18 +29,19 @@
     <ctl:starting-test>csw:Main</ctl:starting-test>
     <ctl:form height="600" width="800">
       <div id="input-form" xmlns="http://www.w3.org/1999/xhtml">
-        <h2>CSW Catalogue 2.0.2 - Test setup</h2>
-        <h3>Service metadata</h3>
+        <h2>CSW Catalogue 2.0.2 Test</h2>
+       
         <p>Please provide a URL from which a capabilities document for the CSW 
-        implementation under test can be retrieved (this can refer to a static 
-        document or to a service endpoint).</p>
+        implementation under test can be retrieved. It can be a static 
+        document or a service endpoint.  Available reference
+        implementations endpoints can be found <a href="http://cite.opengeospatial.org/reference">here</a></p>
         <br />
         <table border="2" padding="4" bgcolor="#00ffff">
           <tr>
             <td align="left">Capabilities URL</td>
             <td align="center">
               <input name="capabilities.url" size="128" 
-                                 type="text" value="http://"/>
+                                 type="text" value="http://demo.pycsw.org/cite/csw?service=CSW&amp;version=2.0.2&amp;request=GetCapabilities"/>
             </td>
           </tr>
         </table>
@@ -101,11 +102,23 @@
     </ctl:comment>
     <ctl:code>
       <ctl:call-test name="ctl:SchematronValidatingParser">
+         <ctl:comment> Check that the capabilities document is valid against the schema. </ctl:comment>
         <ctl:with-param name="doc" select="$csw.capabilities.doc" />
         <ctl:with-param name="schema">/sch/csw/2.0.2/Capabilities.sch</ctl:with-param>
         <ctl:with-param name="phase">RequiredElementsPhase</ctl:with-param>
       </ctl:call-test>
-
+      <ctl:call-test name="csw:GeneralCapabilities">
+       <ctl:with-param name="csw.capabilities.doc" 
+                                 select="$csw.capabilities.doc"/>    
+      </ctl:call-test>
+    </ctl:code>
+    </ctl:test>
+      
+   <ctl:test name="csw:GeneralCapabilities">
+   <ctl:param name="csw.capabilities.doc"/>
+    <ctl:assertion>Confirm that the capabilities response is correct .</ctl:assertion>
+    <ctl:comment>Checks for correct end points using GET </ctl:comment>
+      <ctl:code>
       <xsl:variable name="GetCapabilities.get.endpoint">
         <xsl:value-of select="$csw.capabilities.doc//ows:OperationsMetadata/ows:Operation[@name='GetCapabilities']/ows:DCP/ows:HTTP/ows:Get/@xlink:href"/>
       </xsl:variable>
