@@ -1,5 +1,11 @@
 # CSW 2.0.1 Compliance Test Suite Release Notes
 
+## 1.12 (2015-06-07)
+
+- [#9](https://github.com/opengeospatial/ets-csw202/issues/9) - DescribeRecord invalid type name 
+- [#8](https://github.com/opengeospatial/ets-csw202/issues/8) - Allow for higher versions than CSW 2.0.2  
+
+
 ## 1.11 (2015-03-06)
 
 - [#2](https://github.com/opengeospatial/ets-csw202/issues/2) - Added functionality to parse extended Capabilities
