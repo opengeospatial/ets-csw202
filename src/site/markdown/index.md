@@ -1,10 +1,10 @@
-# CSW 2.0.1 Compliance Test Suite
+# CSW 2.0.2 Compliance Test Suite
 
 ## Overview
 
 This test suite is based on the following OGC specifications:
 
-- OGC Catalogue Services Specification - 2.0.1 [OGC 04-021r3](http://portal.opengeospatial.org/files/?artifact_id=5929&amp;version=2) 
+- OGC Catalogue Services Specification - 2.0.2 [OGC 07-006r1](http://portal.opengeospatial.org/files/?artifact_id=20555) 
 - OpenGIS Web Services Common Specification - 1.0.0 [OGC 05-008c1](https://portal.opengeospatial.org/files/?artifact_id=8798)
 
 The conformance tests provided here are **not** intended to be used in a stand-alone 
