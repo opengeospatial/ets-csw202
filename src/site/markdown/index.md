@@ -46,6 +46,10 @@ The test engine can only execute the whole test suite, it cannot be used to
 run single tests or test groups directly. See the TEAM engine documentation 
 for details on how to run scripts locally, or re-execute single tests.
 
+## Test Lead
+
+   - Lorenzo Bigagli
+   
 ##  Contributors
 
    - Andreas Schmitz 
