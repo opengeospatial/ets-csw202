@@ -922,7 +922,7 @@
                   <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
                     <ogc:PropertyIsGreaterThan>
                       <ogc:PropertyName>dc:date</ogc:PropertyName>
-                      <ogc:Literal>2004-01-01Z</ogc:Literal>
+                      <ogc:Literal>2004-01-01</ogc:Literal>
                     </ogc:PropertyIsGreaterThan>
                   </ogc:Filter>
                 </csw:Constraint>
@@ -991,7 +991,7 @@
                   <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
                     <ogc:PropertyIsLessThan>
                       <ogc:PropertyName>dc:date</ogc:PropertyName>
-                      <ogc:Literal>2006-05-01Z</ogc:Literal>
+                      <ogc:Literal>2006-05-01</ogc:Literal>
                     </ogc:PropertyIsLessThan>
                   </ogc:Filter>
                 </csw:Constraint>
@@ -1117,7 +1117,7 @@
                   <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
                     <ogc:PropertyIsLessThanOrEqualTo>
                       <ogc:PropertyName>dc:date</ogc:PropertyName>
-                      <ogc:Literal>2005-10-24Z</ogc:Literal>
+                      <ogc:Literal>2005-10-24</ogc:Literal>
                     </ogc:PropertyIsLessThanOrEqualTo>
                   </ogc:Filter>
                 </csw:Constraint>
@@ -1186,7 +1186,7 @@
                   <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
                     <ogc:PropertyIsGreaterThanOrEqualTo>
                       <ogc:PropertyName>dc:date</ogc:PropertyName>
-                      <ogc:Literal>2006-03-26Z</ogc:Literal>
+                      <ogc:Literal>2006-03-26</ogc:Literal>
                     </ogc:PropertyIsGreaterThanOrEqualTo>
                   </ogc:Filter>
                 </csw:Constraint>
@@ -1527,7 +1527,7 @@
                       </ogc:BBOX>
                       <ogc:PropertyIsGreaterThan>
                         <ogc:PropertyName>dc:date</ogc:PropertyName>
-                        <ogc:Literal>2006-01-01Z</ogc:Literal>
+                        <ogc:Literal>2006-01-01</ogc:Literal>
                       </ogc:PropertyIsGreaterThan>
                     </ogc:Or>
                   </ogc:Filter>
@@ -1686,7 +1686,7 @@
                       </ogc:BBOX> 
                       <ogc:PropertyIsGreaterThan>
                         <ogc:PropertyName>dc:date</ogc:PropertyName>
-                        <ogc:Literal>2006-01-01Z</ogc:Literal>
+                        <ogc:Literal>2006-01-01</ogc:Literal>
                       </ogc:PropertyIsGreaterThan>
                     </ogc:And>
                   </ogc:Filter>
@@ -2100,8 +2100,7 @@
         </url>
         <method>POST</method>
         <body>
-          <csw:GetRecords xmlns:csw="http://www.opengis.net/cat/csw/2.0.2" 
-  service="CSW" version="2.0.2" resultType="validate">
+          <csw:GetRecords xmlns:csw="http://www.opengis.net/cat/csw/2.0.2" service="CSW" version="2.0.2" resultType="validate">
             <csw:Query typeNames="csw:Record">
               <csw:ElementSetName>full</csw:ElementSetName>
               <csw:Constraint version="1.1.0">
