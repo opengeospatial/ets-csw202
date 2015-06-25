@@ -953,8 +953,8 @@
                 </xsl:if>
               </xsl:when>
               <xsl:otherwise>
-                <xsl:if test="xsd:date(dc:date) le xsd:date('2004-01-01Z')">
-                  <ctl:message>[FAILURE] Included record dated on or before 2004-01-01Z (<xsl:value-of select="dc:date"/>)</ctl:message>
+                <xsl:if test="xsd:date(dc:date) le xsd:date('2004-01-01')">
+                  <ctl:message>[FAILURE] Included record dated on or before 2004-01-01 (<xsl:value-of select="dc:date"/>)</ctl:message>
                   <ctl:fail/>
                 </xsl:if>
               </xsl:otherwise>
@@ -1022,8 +1022,8 @@
                 </xsl:if>
               </xsl:when>
               <xsl:otherwise>
-                <xsl:if test="xsd:date(dc:date) ge xsd:date('2006-05-01Z')">
-                  <ctl:message>[FAILURE] Included record dated on or after 2006-05-01Z (<xsl:value-of select="dc:date"/>)</ctl:message>
+                <xsl:if test="xsd:date(dc:date) ge xsd:date('2006-05-01')">
+                  <ctl:message>[FAILURE] Included record dated on or after 2006-05-01 (<xsl:value-of select="dc:date"/>)</ctl:message>
                   <ctl:fail/>
                 </xsl:if>
               </xsl:otherwise>
@@ -1147,8 +1147,8 @@
                 </xsl:if>
               </xsl:when>
               <xsl:otherwise>
-                <xsl:if test="xsd:date(dc:date) gt xsd:date('2005-10-24Z')">
-                  <ctl:message>[FAILURE] Record dated after 2005-10-24Z (<xsl:value-of select="dc:date"/>)</ctl:message>
+                <xsl:if test="xsd:date(dc:date) gt xsd:date('2005-10-24')">
+                  <ctl:message>[FAILURE] Record dated after 2005-10-24 (<xsl:value-of select="dc:date"/>)</ctl:message>
                   <ctl:fail/>
                 </xsl:if>
               </xsl:otherwise>
@@ -1216,8 +1216,8 @@
                 </xsl:if>
               </xsl:when>
               <xsl:otherwise>
-                <xsl:if test="xsd:date(dc:date) lt xsd:date('2006-03-26Z')">
-                  <ctl:message>[FAILURE] Included record dated before 2006-03-26Z (<xsl:value-of select="dc:date"/>)</ctl:message>
+                <xsl:if test="xsd:date(dc:date) lt xsd:date('2006-03-26')">
+                  <ctl:message>[FAILURE] Included record dated before 2006-03-26 (<xsl:value-of select="dc:date"/>)</ctl:message>
                   <ctl:fail/>
                 </xsl:if>
               </xsl:otherwise>
@@ -1558,14 +1558,14 @@
             </xsl:if>
             <xsl:choose>
               <xsl:when test="dc:date and ows:BoundingBox">
-                <xsl:if test="(xsd:date(dc:date) le xsd:date('2006-01-01Z')) and (csw:disjoint-envelopes($env,ows:BoundingBox) != 0)">
-                  <ctl:message>[FAILURE] Record dated on or before 2006-01-01Z AND envelopes do not intersect (<xsl:value-of select="dc:identifier"/>)</ctl:message>
+                <xsl:if test="(xsd:date(dc:date) le xsd:date('2006-01-01')) and (csw:disjoint-envelopes($env,ows:BoundingBox) != 0)">
+                  <ctl:message>[FAILURE] Record dated on or before 2006-01-01 AND envelopes do not intersect (<xsl:value-of select="dc:identifier"/>)</ctl:message>
                   <ctl:fail/>
                 </xsl:if>
               </xsl:when>
               <xsl:when test="dc:date">
-                <xsl:if test="xsd:date(dc:date) le xsd:date('2006-01-01Z')">
-                  <ctl:message>[FAILURE] Record dated on or before 2006-01-01Z (<xsl:value-of select="dc:identifier"/>)</ctl:message>
+                <xsl:if test="xsd:date(dc:date) le xsd:date('2006-01-01')">
+                  <ctl:message>[FAILURE] Record dated on or before 2006-01-01 (<xsl:value-of select="dc:identifier"/>)</ctl:message>
                   <ctl:fail/>
                 </xsl:if>
               </xsl:when>
@@ -1725,8 +1725,8 @@
                 </xsl:if>
               </xsl:when>
               <xsl:otherwise>
-                <xsl:if test="xsd:date(dc:date) le xsd:date('2006-01-01Z')">
-                  <ctl:message>[FAILURE] dc:date value on or before 2006-01-01Z (<xsl:value-of select="dc:identifier"/>)</ctl:message>
+                <xsl:if test="xsd:date(dc:date) le xsd:date('2006-01-01')">
+                  <ctl:message>[FAILURE] dc:date value on or before 2006-01-01 (<xsl:value-of select="dc:identifier"/>)</ctl:message>
                   <ctl:fail/>
                 </xsl:if>
               </xsl:otherwise>
