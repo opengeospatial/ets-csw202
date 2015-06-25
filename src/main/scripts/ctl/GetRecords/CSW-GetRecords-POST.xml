@@ -1216,8 +1216,8 @@
                 </xsl:if>
               </xsl:when>
               <xsl:otherwise>
-                <xsl:if test="xsd:date(dc:date) lt xsd:date('2006-03-26')">
-                  <ctl:message>[FAILURE] Included record dated before 2006-03-26 (<xsl:value-of select="dc:date"/>)</ctl:message>
+                <xsl:if test="xsd:date(dc:date) lt xsd:date('2006-03-26Z')">
+                  <ctl:message>[FAILURE] Included record dated before 2006-03-26Z (<xsl:value-of select="dc:date"/>)</ctl:message>
                   <ctl:fail/>
                 </xsl:if>
               </xsl:otherwise>
