@@ -1,5 +1,9 @@
 # CSW 2.0.2 Compliance Test Suite Release Notes
 
+## 1.13 ()
+
+- [#6](https://github.com/opengeospatial/ets-csw202/issues/6) - Timezone isn't valid for a dc:date
+
 ## 1.12 (2015-06-07)
 
 - [#9](https://github.com/opengeospatial/ets-csw202/issues/9) - DescribeRecord invalid type name 
