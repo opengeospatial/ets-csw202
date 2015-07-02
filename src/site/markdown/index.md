@@ -33,12 +33,8 @@ CSW-based catalogue implementations.
 
 ##  Test data
 
-The [CSW-2.0.2 test data](data-csw-2.0.2.zip) are available in 
-the common CSW record format. Loading the records into the catalogue is a 
-precondition for compliance testing. While the test data are represented 
-as a collection of csw:Record instances, no assumption is made about which 
-application profile is supported by the implementation. It is expected that 
-each profile defines a suitable mapping for csw:Record items.
+The [CSW-2.0.2 test data](data/csw-2.0.2-data.zip) are available in 
+the common CSW record format. Loading the records into the catalogue is a precondition for compliance testing. While the test data are represented as a collection of csw:Record instances, no assumption is made about which application profile is supported by the implementation. It is expected that each profile defines a suitable mapping for csw:Record items.
 
 ##  Notes
 

@@ -24,7 +24,7 @@
        These tests are intended to be incorporated into profile-specific test 
        suites.
     </ctl:description>
-    <ctl:link>data/data-csw-2.0.2.zip</ctl:link>
+    <ctl:link>data/csw-2.0.2-data.zip</ctl:link>
     <ctl:link>docs/csw/2.0.2/</ctl:link>
     <ctl:starting-test>csw:Main</ctl:starting-test>
     <ctl:form height="600" width="800">
