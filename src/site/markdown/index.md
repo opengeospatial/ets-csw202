@@ -53,6 +53,7 @@ for details on how to run scripts locally, or re-execute single tests.
    - Chuck Morris
    - Kevin Stegemoller
    - Luis Bermudez
+   - Tom Kralidis
 
 ##  License
 

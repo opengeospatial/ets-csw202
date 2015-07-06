@@ -3,6 +3,7 @@
 ## 1.13 ()
 
 - [#6](https://github.com/opengeospatial/ets-csw202/issues/6) - Timezone isn't valid for a dc:date
+- [#11](https://github.com/opengeospatial/ets-csw202/issues/11) - Generate test data bundle on build
 
 ## 1.12 (2015-06-07)
 
