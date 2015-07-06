@@ -46,7 +46,7 @@ Follow the [TEAM ENGINE instructions](http://opengeospatial.github.io/teamengine
 
 ## Bugs
 
-Issue tracker is available at:
+Issue tracker is available at
 [github](https://github.com/opengeospatial/ets-csw202/issues).
 
 ## Mailing Lists
