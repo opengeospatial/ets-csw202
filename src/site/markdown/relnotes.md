@@ -2,7 +2,7 @@
 
 ## 1.13 ()
 
-- [#6](https://github.com/opengeospatial/ets-csw202/issues/6) - Timezone isn't valid for a dc:date
+- [#6](https://github.com/opengeospatial/ets-csw202/issues/6) - Timezoned-date literals are not recommended for dc:date
 - [#11](https://github.com/opengeospatial/ets-csw202/issues/11) - Generate test data bundle on build
 - lots of GetCapabilities tests restored (mistakenly gone lost in past commits)
 
