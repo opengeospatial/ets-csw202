@@ -4,12 +4,12 @@
 
 - [#6](https://github.com/opengeospatial/ets-csw202/issues/6) - Timezone isn't valid for a dc:date
 - [#11](https://github.com/opengeospatial/ets-csw202/issues/11) - Generate test data bundle on build
+- lots of GetCapabilities tests restored (mistakenly gone lost in past commits)
 
 ## 1.12 (2015-06-07)
 
 - [#9](https://github.com/opengeospatial/ets-csw202/issues/9) - DescribeRecord invalid type name 
 - [#8](https://github.com/opengeospatial/ets-csw202/issues/8) - Allow for higher versions than CSW 2.0.2  
-
 
 ## 1.11 (2015-03-06)
 
