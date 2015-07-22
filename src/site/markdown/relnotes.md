@@ -1,6 +1,6 @@
 # CSW 2.0.2 Compliance Test Suite Release Notes
 
-## 1.13 ()
+## 1.13 (2015-07-22)
 
 - [#6](https://github.com/opengeospatial/ets-csw202/issues/6) - Timezoned-date literals are not recommended for dc:date
 - [#11](https://github.com/opengeospatial/ets-csw202/issues/11) - Generate test data bundle on build
