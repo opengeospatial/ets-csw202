@@ -1135,7 +1135,7 @@
         </xsl:when>
         <xsl:otherwise>
           <xsl:if test="count($response//csw:SearchResults/csw:Record) lt 2">
-            <ctl:message>[FAILURE] AT least two csw:Record elements expected in response.</ctl:message>
+            <ctl:message>[FAILURE] At least two csw:Record elements expected in response.</ctl:message>
             <ctl:fail/>
           </xsl:if>
           <xsl:for-each select="$response//csw:SearchResults/*">
