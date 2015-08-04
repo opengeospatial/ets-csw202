@@ -1,4 +1,4 @@
-# CSW 2.0.2 Compliance Test Suite Release Notes
+# CSW 2.0.2 Conformance Test Suite Release Notes
 
 ## 1.13 (2015-07-22)
 

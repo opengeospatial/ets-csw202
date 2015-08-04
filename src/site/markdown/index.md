@@ -1,4 +1,4 @@
-# CSW 2.0.2 Compliance Test Suite
+# CSW 2.0.2 Conformance Test Suite
 
 ## Overview
 
@@ -49,7 +49,6 @@ for details on how to run scripts locally, or re-execute single tests.
 ##  Contributors
 
    - Andreas Schmitz 
-   - Lorenzo Bigagli
    - Chuck Morris
    - Kevin Stegemoller
    - Luis Bermudez
@@ -58,8 +57,3 @@ for details on how to run scripts locally, or re-execute single tests.
 ##  License
 
 [Apache License, Version 2.0](http://opensource.org/licenses/Apache-2.0 "Apache License")
-
-
-## Release Notes
-
-Release notes are available at the [relnotes.html](relnotes.html).
