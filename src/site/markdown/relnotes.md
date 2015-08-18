@@ -1,5 +1,7 @@
 # CSW 2.0.2 Conformance Test Suite Release Notes
 
+## 1.15 (TBD)
+
 ## 1.14 (2015-08-18)
 - [#17](https://github.com/opengeospatial/ets-csw202/issues/17) - Remove relnotes from index.md
 - [#13](https://github.com/opengeospatial/ets-csw202/issues/16) - CSW-2.0.2-GetCapabilities-tc1.3 shall accept an unknown response for backward compatibility
