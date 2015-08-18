@@ -1,5 +1,9 @@
 # CSW 2.0.2 Conformance Test Suite Release Notes
 
+## 1.14
+- [#17](https://github.com/opengeospatial/ets-csw202/issues/17) - Remove relnotes from index.md
+- [#13](https://github.com/opengeospatial/ets-csw202/issues/16) - CSW-2.0.2-GetCapabilities-tc1.3 shall accept an unknown response for backward compatibility
+
 ## 1.13 (2015-07-22)
 
 - [#6](https://github.com/opengeospatial/ets-csw202/issues/6) - Timezoned-date literals are not recommended for dc:date

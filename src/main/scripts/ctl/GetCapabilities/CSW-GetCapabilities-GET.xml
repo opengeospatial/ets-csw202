@@ -193,13 +193,17 @@
       <param name="csw.GetCapabilities.get.url"/>
       <assertion>
       The response to a GetCapabilities request containing an ACCEPTVERSIONS 
-      parameter that DOES NOT list a supported version must include an exception 
-      with exceptionCode="VersionNegotiationFailed".
+      parameter that does not contain any version numbers that the server supports
+      must include an Exception with exceptionCode="VersionNegotiationFailed".
+      
+	  Note: to ensure backward compatibility, clients must also be prepared to accept
+	  an unknown response and treat this situation as an indication that version
+	  negotiation has failed, as expected (e.g., a CSW 3.0 would return a OWS 2.0 Exception).
       </assertion>
       <comment>
-      Pass if all of the following conditions are true: (1) the response 
-      entity has &lt;ows:ExceptionReport&gt; as the document element; and (2) 
-      ows:Exception/@exceptionCode="VersionNegotiationFailed".
+      Pass if all of the following conditions are true: (1) the response is not
+      empty; and (2) if the document element is &lt;ows:ExceptionReport&gt;,
+      then it is valid and ows:Exception/@exceptionCode="VersionNegotiationFailed".
       </comment>
       <link>OGC-05-008, 7.3.2</link>
 		<code>
@@ -222,11 +226,18 @@
                   <ctl:fail/>
               </xsl:when>
               <xsl:otherwise>
-                <ctl:call-test name="ctl:SchematronValidatingParser">
-		            <ctl:with-param name="doc" select="$response" />
-		            <ctl:with-param name="schema">/sch/ows/1.0.0/ExceptionReport.sch</ctl:with-param>
-		            <ctl:with-param name="phase">VersionNegotiationFailedPhase</ctl:with-param>
-	            </ctl:call-test>
+              	<xsl:choose>
+              		<xsl:when test="$response/ows:ExceptionReport">
+              			<ctl:call-test name="ctl:SchematronValidatingParser">
+		            		<ctl:with-param name="doc" select="$response" />
+		            		<ctl:with-param name="schema">/sch/ows/1.0.0/ExceptionReport.sch</ctl:with-param>
+		            		<ctl:with-param name="phase">VersionNegotiationFailedPhase</ctl:with-param>
+	            		</ctl:call-test>
+              		</xsl:when>
+              		<xsl:otherwise>
+              			<!-- we consider the test passed; see the note in the assertion -->
+              		</xsl:otherwise>
+              	</xsl:choose>
               </xsl:otherwise>
             </xsl:choose>
 		</code>

@@ -42,13 +42,14 @@
   </sch:phase>
 
   <sch:pattern id="ExceptionReportPattern" name="ExceptionReportPattern">
-    <sch:p xml:lang="en">Checks that the document is an OWS exception report.</sch:p>
+    <sch:p xml:lang="en">Checks that the document is an OWS 1.0 exception report.</sch:p>
     <sch:rule id="ExceptionReport" context="/">
       <sch:assert id="ExceptionReport.infoset" 
         test="ows:ExceptionReport"
         diagnostics="includedDocElem">
 	The document element must have [local name] = "ExceptionReport" and [namespace name] = "http://www.opengis.net/ows".
       </sch:assert>
+      <!-- check that the version is '1.2.0' (CSW 2.0.2, §10.3.7) -->
       <sch:assert id="ExceptionReport.version" 
         test="ows:ExceptionReport/@version = '1.2.0'"
         diagnostics="reportedVersion">
