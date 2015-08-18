@@ -203,7 +203,8 @@
       <comment>
       Pass if all of the following conditions are true: (1) the response is not
       empty; and (2) if the document element is &lt;ows:ExceptionReport&gt;,
-      then it is valid and ows:Exception/@exceptionCode="VersionNegotiationFailed".
+      then it conforms to the specification
+      (e.g. ows:Exception/@exceptionCode="VersionNegotiationFailed").
       </comment>
       <link>OGC-05-008, 7.3.2</link>
 		<code>
@@ -216,7 +217,6 @@
 					<param name="SERVICE">CSW</param>
 					<param name="REQUEST">GetCapabilities</param>
                     <param name="ACCEPTVERSIONS">2006.10.29</param>
-					<p:XMLValidatingParser.OWS/>
 				</request>
 			</xsl:variable>
 			
@@ -228,6 +228,10 @@
               <xsl:otherwise>
               	<xsl:choose>
               		<xsl:when test="$response/ows:ExceptionReport">
+              			<ctl:call-test name="ctl:XMLValidatingParser">
+              				<ctl:with-param name="doc" select="$response" />
+		            		<ctl:with-param name="instruction">/xsd/ogc/ows/1.0.0/ows-1.0.0.xsd</ctl:with-param>
+              			</ctl:call-test>
               			<ctl:call-test name="ctl:SchematronValidatingParser">
 		            		<ctl:with-param name="doc" select="$response" />
 		            		<ctl:with-param name="schema">/sch/ows/1.0.0/ExceptionReport.sch</ctl:with-param>
