@@ -1,6 +1,7 @@
 # CSW 2.0.2 Conformance Test Suite Release Notes
 
-## 1.15 (TBD)
+## 1.15 (TBD in November 2015)
+- [#7](https://github.com/opengeospatial/ets-csw202/issues/7) - Test 19.1 PropertyIsLike should match case by default in GetRecords filter
 
 ## 1.14 (2015-08-18)
 - [#17](https://github.com/opengeospatial/ets-csw202/issues/17) - Remove relnotes from index.md
