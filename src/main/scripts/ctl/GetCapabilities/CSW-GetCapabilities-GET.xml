@@ -538,14 +538,14 @@
       <param name="csw.GetCapabilities.get.url"/>
       <assertion>
       The response to a GetCapabilities request that includes a sections parameter 
-      listing optional elements shall include only the requested elements in the 
-      response entity.
+      listing optional elements shall be a valid document including only the requested
+      optional elements.
       </assertion>
       <comment>
       Pass if the response is schema valid and includes only the requested optional 
       elements.
       </comment>
-      <link>OGC 05-008: 7.3.3 (p.17)</link>
+      <link>OGC 05-008: 7.3.3 (p.17), OGC 07-006r1: 7.2.3.2 (p.30-31)</link>
       <code>
 		<xsl:variable name="response">
 			<request>
