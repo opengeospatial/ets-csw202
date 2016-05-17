@@ -515,7 +515,7 @@
                 <csw:Constraint version="1.1.0">
                   <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc" xmlns:gml="http://www.opengis.net/gml">
                     <ogc:BBOX>
-                      <ogc:PropertyName>/ows:BoundingBox</ogc:PropertyName>
+                      <ogc:PropertyName>ows:BoundingBox</ogc:PropertyName>
                       <gml:Envelope srsName="urn:x-ogc:def:crs:EPSG:6.11:4326">
                         <gml:lowerCorner>47.0 -4.5</gml:lowerCorner>
                         <gml:upperCorner>52.0 1.0</gml:upperCorner>
