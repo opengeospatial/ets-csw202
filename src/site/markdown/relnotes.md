@@ -1,6 +1,6 @@
 # CSW 2.0.2 Conformance Test Suite Release Notes
 
-## 1.16 (TBD)
+## 1.16 (2016-05-26)
 - [#19](https://github.com/opengeospatial/ets-csw202/pull/19) - Removed '/' at the beginning of filter property names, to fix the intended XPath syntax
 
 ## 1.15 (2016-01-21)
