@@ -32,7 +32,7 @@
 		<ets-code>csw</ets-code>
 		<spec-version>2.0.2</spec-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<teamengine.version>4.0.6</teamengine.version>
+		<teamengine.version>4.10</teamengine.version>
 	</properties>
 
 	<build>
