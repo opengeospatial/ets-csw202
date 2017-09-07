@@ -43,6 +43,7 @@ public class VerifyTestSuite {
 
     static final int VERDICT_PASS = 1;
     static final int VERDICT_SKIP = 3;
+    static final int VERDICT_INHERITED_FAIL = 5;
     static final int VERDICT_FAIL = 6;
     private static Properties testProps;
     private static Properties sutProps;
