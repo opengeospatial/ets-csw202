@@ -91,31 +91,30 @@
   </ctl:test>
 
 	<ctl:test name="csw:SmokeTest">
-		<ctl:param name="csw.capabilities.doc" />
-		<ctl:assertion>Confirm that the IUT is ready to undergo testing.
-		</ctl:assertion>
-		<ctl:comment>
-			Check all of the following conditions:
-			(1) the service is available;
-			(2) the capabilities document is valid;
-			(3) test data have been loaded.
-			If any of these checks fail, the test run is aborted.
-		</ctl:comment>
-		<ctl:code>
-			<ctl:call-test name="ctl:SchematronValidatingParser">
-				<ctl:comment>Check that the capabilities document is valid against
-					the schema. </ctl:comment>
-				<ctl:with-param name="doc" select="$csw.capabilities.doc" />
-				<ctl:with-param name="schema">/sch/csw/2.0.2/Capabilities.sch
-				</ctl:with-param>
-				<ctl:with-param name="phase">RequiredElementsPhase
-				</ctl:with-param>
-			</ctl:call-test>
-			<ctl:call-test name="csw:GeneralCapabilities">
-				<ctl:with-param name="csw.capabilities.doc" select="$csw.capabilities.doc" />
-			</ctl:call-test>
-		</ctl:code>
-	</ctl:test>
+	<ctl:param name="csw.capabilities.doc" />
+	<ctl:assertion>Confirm that the IUT is ready to undergo testing.
+	</ctl:assertion>
+	<ctl:comment>
+		Check all of the following conditions:
+		(1) the service is available;
+		(2) the capabilities document is valid;
+		(3) test data have been loaded.
+		If any of these checks fail, the test run is aborted.
+	</ctl:comment>
+	<ctl:code>
+		<ctl:call-test name="ctl:SchematronValidatingParser">
+			<ctl:comment>Check that the capabilities document is valid against
+				the schema.
+			</ctl:comment>
+			<ctl:with-param name="doc" select="$csw.capabilities.doc" />
+			<ctl:with-param name="schema">/sch/csw/2.0.2/Capabilities.sch</ctl:with-param>
+			<ctl:with-param name="phase">RequiredElementsPhase</ctl:with-param>
+		</ctl:call-test>
+		<ctl:call-test name="csw:GeneralCapabilities">
+			<ctl:with-param name="csw.capabilities.doc" select="$csw.capabilities.doc" />
+		</ctl:call-test>
+	</ctl:code>
+</ctl:test>
       
    <ctl:test name="csw:GeneralCapabilities">
    <ctl:param name="csw.capabilities.doc"/>
