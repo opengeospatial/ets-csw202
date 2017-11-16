@@ -1,6 +1,6 @@
 # CSW 2.0.2 Conformance Test Suite Release Notes
 
-## 1.17 (TBD)
+## 1.17 (2017-11-16)
 - [#20](https://github.com/opengeospatial/ets-csw202/issues/20) - Added isConformanceClass and isBasic attributes to qualify the Main test
 
 ## 1.16 (2016-05-26)
