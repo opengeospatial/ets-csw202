@@ -136,6 +136,7 @@
 				<configuration>
 					<relativizeDecorationLinks>false</relativizeDecorationLinks>
 					<generateReports>false</generateReports>
+					<skipDeploy>true</skipDeploy>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -174,6 +175,32 @@
 					<execution>
 						<goals>
 							<goal>process</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5.3</version>
+				<configuration>
+					<autoVersionSubmodules>true</autoVersionSubmodules>
+					<tagNameFormat>@{project.version}</tagNameFormat>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-scm-publish-plugin</artifactId>
+				<version>1.1</version>
+				<configuration>
+					<content>${project.reporting.outputDirectory}</content>
+					<scmBranch>gh-pages</scmBranch>
+				</configuration>
+				<executions>
+					<execution>
+						<id>scm-publish</id>
+						<phase>site-deploy</phase>
+						<goals>
+							<goal>publish-scm</goal>
 						</goals>
 					</execution>
 				</executions>
@@ -221,5 +248,12 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
+	<distributionManagement>
+		<site>
+			<id>site</id>
+			<url>scm:git:git@github.com:opengeospatial/ets-csw20.git</url>
+		</site>
+	</distributionManagement>
 
 </project>
