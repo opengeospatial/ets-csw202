@@ -251,7 +251,7 @@
 	<distributionManagement>
 		<site>
 			<id>site</id>
-			<url>scm:git:git@github.com:opengeospatial/ets-csw20.git</url>
+			<url>scm:git:git@github.com:opengeospatial/ets-csw202.git</url>
 		</site>
 	</distributionManagement>
 
