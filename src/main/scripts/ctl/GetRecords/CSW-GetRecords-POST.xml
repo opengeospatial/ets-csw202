@@ -2073,8 +2073,8 @@
           <ctl:message>[FAILURE] csw:SearchResults should be empty (<xsl:value-of select="$nRecords"/> included)</ctl:message>
           <ctl:fail/>
         </xsl:if>
-        <xsl:if test="xsd:integer($response//csw:SearchResults/@numberOfRecordsMatched) le 1">
-          <ctl:message>[FAILURE] Expected @numberOfRecordsMatched &gt; 1</ctl:message>
+        <xsl:if test="xsd:integer($response//csw:SearchResults/@numberOfRecordsMatched) le 10">
+          <ctl:message>[FAILURE] Expected @numberOfRecordsMatched &gt; 10</ctl:message>
           <ctl:fail/>
         </xsl:if>
         <xsl:if test="$response//csw:SearchResults/@nextRecord != 1">

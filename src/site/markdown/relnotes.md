@@ -1,5 +1,8 @@
 # CSW 2.0.2 Conformance Test Suite Release Notes
 
+## 1.18 (TBD)
+- minor amendment to test tc23.1, to align with its documentation - the documentation includes the condition that numberOfRecordsMatched > 10, but the test implementation actually tested for numberOfRecordsMatched > 1 (note: both could be amended to align with the other).
+
 ## 1.17 (2017-11-16)
 - [#20](https://github.com/opengeospatial/ets-csw202/issues/20) - Added isConformanceClass and isBasic attributes to qualify the Main test
 
