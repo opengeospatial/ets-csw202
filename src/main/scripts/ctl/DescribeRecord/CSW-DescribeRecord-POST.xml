@@ -10,7 +10,7 @@
   xmlns:ows="http://www.opengis.net/ows"
   xmlns:xlink="http://www.w3.org/1999/xlink">
 
-  <ctl:test name="csw:DescribeRecord-POST">
+  <ctl:test name="csw:DescribeRecord-POST" isConformanceClass="true" isBasic="false">
     <ctl:param name="csw.capabilities.doc"/>
     <ctl:assertion>
       A conforming implementation must support DescribeRecord XML requests using the POST method.

@@ -14,7 +14,7 @@
   xmlns:ows="http://www.opengis.net/ows"
   xmlns:xlink="http://www.w3.org/1999/xlink">
 
-  <ctl:test name="csw:GetRecords-POST">
+  <ctl:test name="csw:GetRecords-POST" isConformanceClass="true" isBasic="true">
     <param name="csw.capabilities.doc"/>
     <ctl:assertion>
     A conforming implementation must satisfy all assertions for GetRecords XML requests using the POST method.

@@ -9,7 +9,7 @@
  xmlns:csw="http://www.opengis.net/cat/csw/2.0.2"
  xmlns:xi="http://www.w3.org/2001/XInclude">
 
-	<test name="csw:GetCapabilities-GET">
+	<test name="csw:GetCapabilities-GET" isConformanceClass="true" isBasic="true">
 		<param name="csw.capabilities.doc" />
 		<ctl:assertion>
 			Run test group for GetCapabilities requests using the GET method.
