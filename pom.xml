@@ -7,9 +7,9 @@
 
 	<name>Conformance Test Suite - CSW 2.0.2</name>
 	<description>
-  Verifies implementations of the CSW part (clause 10) of the OpenGIS Catalogue 
-  Service Implementation Specification, Version 2.0.2 (OGC 07-006r1).
-  </description>
+	Verifies implementations of the CSW part (clause 10) of the OpenGIS Catalogue 
+	Service Implementation Specification, Version 2.0.2 (OGC 07-006r1).
+	</description>
 	<url>https://github.com/opengeospatial/ets-csw20</url>
 
 	<organization>
