@@ -110,41 +110,14 @@
 					<ctl:fail />
 				</xsl:when>
 				<xsl:otherwise>
-					<xsl:choose>
-						<xsl:when test="not($response//ows:ExtendedCapabilities/*)">
-							<!-- validate $response with standard CSW schema(tron) only -->
-							<ctl:call-test name="ctl:XMLValidatingParser.CSW">
-								<ctl:with-param name="doc" select="$response" />
-							</ctl:call-test>
-							<ctl:call-test name="ctl:SchematronValidatingParser">
-								<ctl:with-param name="doc" select="$response" />
-								<ctl:with-param name="schema">/sch/csw/2.0.2/Capabilities.sch</ctl:with-param>
-								<ctl:with-param name="phase">DefaultPhase</ctl:with-param>
-							</ctl:call-test>
-						</xsl:when>
-						<xsl:otherwise>
-							<!-- validate all with internal hints... -->
-							<ctl:call-test name="ctl:XMLValidatingParser.HINTS">
-								<ctl:with-param name="doc" select="$response" />
-							</ctl:call-test>
-							<!-- ... prune ExtCap and... -->
-							<xsl:variable name="prune-xsl" select="tec:findXMLResource($te:core, '/csw-prune.xsl')" />
-							<xsl:variable name="standardCap" select="saxon:transform(saxon:compile-stylesheet($prune-xsl), $response)" />
-							<!-- possible alternative: use XSLTransformationParser
-							 <parsers:XSLTransformationParser>
-								<xsl:stylesheet/>|<xsl:transform/>
-							</parsers:XSLTransformationParser> -->
-							<!-- ... validate standardCap with CSW schema(tron) -->
-							<ctl:call-test name="ctl:XMLValidatingParser.CSW">
-								<ctl:with-param name="doc" select="$standardCap" />
-							</ctl:call-test>
-							<ctl:call-test name="ctl:SchematronValidatingParser">
-								<ctl:with-param name="doc" select="$standardCap" />
-								<ctl:with-param name="schema">/sch/csw/2.0.2/Capabilities.sch</ctl:with-param>
-								<ctl:with-param name="phase">DefaultPhase</ctl:with-param>
-							</ctl:call-test>
-						</xsl:otherwise>
-					</xsl:choose>
+					<ctl:call-test name="ctl:XMLValidatingParser.CSW">
+						<ctl:with-param name="doc" select="$response" />
+					</ctl:call-test>
+					<ctl:call-test name="ctl:SchematronValidatingParser">
+						<ctl:with-param name="doc" select="$response" />
+						<ctl:with-param name="schema">/sch/csw/2.0.2/Capabilities.sch</ctl:with-param>
+						<ctl:with-param name="phase">DefaultPhase</ctl:with-param>
+					</ctl:call-test>
 				</xsl:otherwise>
 			</xsl:choose>
 		</code>

@@ -531,10 +531,16 @@ organization or individual. </documentation>
 		</complexType>
 	</element>
 	<!-- ========================================================== -->
-	<element name="ExtendedCapabilities" type="anyType">
+	<element name="ExtendedCapabilities" >
 		<annotation>
 			<documentation>Individual software vendors and servers can use this element to provide metadata about any additional server abilities. </documentation>
 		</annotation>
+		<complexType>
+			<sequence>
+				<!-- added processContents="lax" to avoid failures during validation (see https://github.com/opengeospatial/ets-csw202/issues/23) -->
+				<any processContents="lax"/>
+			</sequence>
+		</complexType>
 	</element>
 	<!-- ========================================================== -->
 	<element name="Operation">
