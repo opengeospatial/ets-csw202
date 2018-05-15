@@ -81,12 +81,38 @@
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.7.1</version>
+				<executions>
+					<execution>
+						<id>site-package</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>site</goal>
+						</goals>
+					</execution>
+				</executions>
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.maven.doxia</groupId>
+						<artifactId>doxia-module-markdown</artifactId>
+						<version>1.8</version>
+					</dependency>
+				</dependencies>
+				<configuration>
+					<relativizeDecorationLinks>false</relativizeDecorationLinks>
+					<generateReports>false</generateReports>
+					<skipDeploy>true</skipDeploy>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-assembly-plugin</artifactId>
-				<version>2.5.2</version>
+				<version>3.1.0</version>
 				<executions>
 					<execution>
 						<id>assemble_data</id>
-						<phase>package</phase>
+						<phase>prepare-package</phase>
 						<goals>
 							<goal>single</goal>
 						</goals>
@@ -110,33 +136,19 @@
 							</descriptors>
 						</configuration>
 					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-site-plugin</artifactId>
-				<version>3.4</version>
-				<executions>
 					<execution>
-						<id>site-package</id>
-						<phase>prepare-package</phase>
+						<id>assemble_site</id>
+						<phase>package</phase>
 						<goals>
-							<goal>jar</goal>
+							<goal>single</goal>
 						</goals>
+						<configuration>
+							<descriptors>
+								<descriptor>src/assembly/site.xml</descriptor>
+							</descriptors>
+						</configuration>
 					</execution>
 				</executions>
-				<dependencies>
-					<dependency>
-						<groupId>org.apache.maven.doxia</groupId>
-						<artifactId>doxia-module-markdown</artifactId>
-						<version>1.6</version>
-					</dependency>
-				</dependencies>
-				<configuration>
-					<relativizeDecorationLinks>false</relativizeDecorationLinks>
-					<generateReports>false</generateReports>
-					<skipDeploy>true</skipDeploy>
-				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
