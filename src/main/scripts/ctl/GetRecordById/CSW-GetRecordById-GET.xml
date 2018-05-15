@@ -156,7 +156,7 @@
         </ctl:request>
       </xsl:variable>
       <xsl:variable name="id.2">
-        <xsl:value-of select="$response0//csw:SearchResults/*[2]/dc:identifier"/>
+        <xsl:value-of select="$response0//csw:SearchResults/*[2]/dc:identifier[1]"/>
       </xsl:variable>
       <xsl:variable name="response">
         <ctl:request>
