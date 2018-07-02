@@ -12,7 +12,7 @@
  xmlns:ows="http://www.opengis.net/ows"
  xmlns:xlink="http://www.w3.org/1999/xlink">
 
-  <ctl:test name="csw:GetRecordById-GET">
+  <ctl:test name="csw:GetRecordById-GET" isConformanceClass="true" isBasic="true">
     <param name="csw.capabilities.doc" />
     <ctl:assertion>
       Run test group for GetRecordById requests using the GET method.
