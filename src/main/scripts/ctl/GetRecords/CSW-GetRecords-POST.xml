@@ -372,9 +372,9 @@
             <ctl:message>[FAILURE] 10 csw:BriefRecord elements expected in response.</ctl:message>
             <ctl:fail/>
           </xsl:if>
-          <xsl:variable name="r1.id" select="$response//csw:SearchResults/*[1]/dc:identifier"/> 
-          <xsl:variable name="r2.id" select="$response//csw:SearchResults/*[2]/dc:identifier"/>
-          <xsl:variable name="r3.id" select="$response//csw:SearchResults/*[3]/dc:identifier"/>
+          <xsl:variable name="r1.id" select="$response//csw:SearchResults/*[1]/dc:identifier[1]"/>
+          <xsl:variable name="r2.id" select="$response//csw:SearchResults/*[2]/dc:identifier[1]"/>
+          <xsl:variable name="r3.id" select="$response//csw:SearchResults/*[3]/dc:identifier[1]"/>
           <xsl:if test="(compare($r1.id,$r2.id) ne -1) or (compare($r2.id,$r3.id) ne -1)">
             <ctl:message>[FAILURE] Search results are not sorted correctly by dc:identifier in ascending order.</ctl:message>
             <ctl:fail/>
