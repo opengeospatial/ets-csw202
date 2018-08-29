@@ -1,6 +1,10 @@
 # CSW 2.0.2 Conformance Test Suite Release Notes
 
-## 1.18 (TBD)
+## 1.18 (2018-08-29)
+- [#23](https://github.com/opengeospatial/ets-csw202/issues/23) - Test csw:csw-2.0.2-GetCapabilities-tc1.1 fails if capabilities contains ExtendedCapabilities
+- [#21](https://github.com/opengeospatial/ets-csw202/issues/21) - A sequence of more than one item is not allowed as the first argument of compare()
+- [#29](https://github.com/opengeospatial/ets-csw202/issues/29) - Link to testdata is invalid
+- [#27](https://github.com/opengeospatial/ets-csw202/issues/27) - New HTML report does not list tests
 - minor amendment to test tc23.1, to align with its documentation - the documentation includes the condition that numberOfRecordsMatched > 10, but the test implementation actually tested for numberOfRecordsMatched > 1 (note: both could be amended to align with the other).
 
 ## 1.17 (2017-11-16)
