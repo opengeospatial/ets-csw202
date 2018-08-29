@@ -12,4 +12,7 @@ release.properties
 # GIT
 .DS_Store
 
+# IntelliJ IDEA
+.idea/
+*.iml
 
