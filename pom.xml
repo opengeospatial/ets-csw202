@@ -4,6 +4,7 @@
   <artifactId>ets-csw20</artifactId>
   <groupId>org.opengis.cite</groupId>
   <version>1.19-SNAPSHOT</version>
+  <packaging>pom</packaging>
 
   <name>Conformance Test Suite - CSW 2.0.2</name>
   <description>
@@ -26,6 +27,21 @@
     <system>GitHub Issue Tracker</system>
     <url>https://github.com/opengeospatial/ets-csw202/issues</url>
   </issueManagement>
+
+  <developers>
+    <developer>
+      <name>L. Bermudez</name>
+      <url>https://github.com/bermud</url>
+    </developer>
+    <developer>
+      <name>D. Stenger</name>
+      <url>https://github.com/dstenger</url>
+    </developer>
+    <developer>
+      <name>L. Goltz</name>
+      <url>https://github.com/lgoltz</url>
+    </developer>
+  </developers>
 
   <properties>
     <ets-code>csw</ets-code>
