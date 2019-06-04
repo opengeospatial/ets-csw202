@@ -13,6 +13,13 @@
   </description>
   <url>https://github.com/opengeospatial/ets-csw20</url>
 
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>http://opensource.org/licenses/Apache-2.0</url>
+    </license>
+  </licenses>
+
   <organization>
     <name>Open Geospatial Consortium</name>
     <url>http://www.opengeospatial.org</url>
