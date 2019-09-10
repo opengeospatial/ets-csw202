@@ -4,7 +4,6 @@
   <artifactId>ets-csw20</artifactId>
   <groupId>org.opengis.cite</groupId>
   <version>1.19-SNAPSHOT</version>
-  <packaging>jar</packaging>
 
   <name>Conformance Test Suite - CSW 2.0.2</name>
   <description>
@@ -54,7 +53,7 @@
     <ets-code>csw</ets-code>
     <spec-version>2.0.2</spec-version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <teamengine.version>4.10</teamengine.version>
+    <teamengine.version>5.4</teamengine.version>
   </properties>
 
   <build>
@@ -94,13 +93,18 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
-        <version>2.5</version>
-        <executions>
-          <execution>
-            <id>default-jar</id>
-            <phase>disable</phase>
-          </execution>
-        </executions>
+        <version>3.0.2</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+            </manifest>
+            <manifestEntries>
+              <Build-Time>${maven.build.timestamp}</Build-Time>
+              <Build-Revision>${buildNumber}</Build-Revision>
+            </manifestEntries>
+          </archive>
+        </configuration>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -155,7 +159,9 @@
             </goals>
             <configuration>
               <descriptors>
-                <descriptor>src/assembly/ctl.xml</descriptor>
+                <descriptor>${basedir}/src/assembly/ctl.xml</descriptor>
+                <descriptor>${basedir}/src/assembly/aio.xml</descriptor>
+                <descriptor>${basedir}/src/assembly/deps.xml</descriptor>
               </descriptors>
             </configuration>
           </execution>
@@ -188,10 +194,10 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.2</version>
+        <version>3.6.0</version>
         <configuration>
-          <source>1.7</source>
-          <target>1.7</target>
+          <source>1.8</source>
+          <target>1.8</target>
         </configuration>
       </plugin>
       <plugin>
@@ -250,6 +256,21 @@
       </plugin>
     </plugins>
 
+    <resources>
+      <resource>
+        <directory>${basedir}/src/main/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+      <resource>
+        <directory>${basedir}/src/main/scripts</directory>
+        <targetPath>${ets-code}/${spec-version}</targetPath>
+      </resource>
+      <resource>
+        <directory>src/main/javadoc</directory>
+        <filtering>true</filtering>
+        <targetPath>doc/${ets-code}/${project.version}</targetPath>
+      </resource>
+    </resources>
     <testResources>
       <testResource>
         <directory>${basedir}/src/test/resources</directory>
@@ -280,9 +301,8 @@
   <dependencies>
     <dependency>
       <groupId>org.opengis.cite.teamengine</groupId>
-      <artifactId>teamengine-core</artifactId>
+      <artifactId>teamengine-spi-ctl</artifactId>
       <version>${teamengine.version}</version>
-      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
