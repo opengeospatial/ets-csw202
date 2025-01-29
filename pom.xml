@@ -100,18 +100,7 @@
             </configuration>
           </execution>
           <execution>
-            <id>assemble_ctl</id>
-            <phase>package</phase>
-            <goals>
-              <goal>single</goal>
-            </goals>
-            <configuration>
-              <descriptors>
-                <descriptor>${basedir}/src/assembly/ctl.xml</descriptor>
-              </descriptors>
-            </configuration>
-          </execution>
-          <execution>
+            <id>default</id>
             <phase>package</phase>
             <goals>
               <goal>single</goal>
@@ -119,6 +108,7 @@
             <configuration>
               <descriptors>
                 <descriptor>${basedir}/src/assembly/site.xml</descriptor>
+                <descriptor>${basedir}/src/assembly/ctl.xml</descriptor>
               </descriptors>
             </configuration>
           </execution>
