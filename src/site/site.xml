@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="${project.name}" 
-    xmlns="http://maven.apache.org/DECORATION/1.7.0" 
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/DECORATION/1.7.0 http://maven.apache.org/xsd/decoration-1.7.0.xsd">
+<project name="${project.name}"
+         xmlns="http://maven.apache.org/DECORATION/1.7.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/DECORATION/1.7.0 http://maven.apache.org/xsd/decoration-1.7.0.xsd">
 
   <skin>
     <groupId>org.apache.maven.skins</groupId>
@@ -10,7 +10,7 @@
     <version>2.0.1</version>
   </skin>
   <custom>
-    <fluidoSkin>o
+    <fluidoSkin>
       <sideBarEnabled>true</sideBarEnabled>
     </fluidoSkin>
   </custom>
@@ -20,7 +20,7 @@
     <src>./img/ogc-logo.png</src>
     <href>http://cite.opengeospatial.org/</href>
   </bannerLeft>
-    <bannerRight>
+  <bannerRight>
     <name>${project.name}</name>
   </bannerRight>
 
@@ -28,13 +28,12 @@
     <links>
       <item name="Issues" href="https://github.com/opengeospatial/ets-csw202/issues"/>
     </links>
-     <menu name="Documentation">
-      <item href="index.html" name="Overview" />
-      <item href="relnotes.html" name="Release Notes" />
+    <menu name="Documentation">
+      <item href="index.html" name="Overview"/>
+      <item href="relnotes.html" name="Release Notes"/>
     </menu>
-    <menu ref="reports" />
+    <menu ref="reports"/>
 
-  
 
   </body>
 </project>
