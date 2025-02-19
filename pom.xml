@@ -59,15 +59,17 @@
   <properties>
     <ets-code>csw</ets-code>
     <spec-version>2.0.2</spec-version>
-
   </properties>
 
   <dependencies>
     <dependency>
       <groupId>org.opengis.cite.teamengine</groupId>
+      <artifactId>teamengine-spi-ctl</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.opengis.cite.teamengine</groupId>
       <artifactId>teamengine-core</artifactId>
       <version>${teamengine.version}</version>
-      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
@@ -78,9 +80,8 @@
 
   <build>
     <plugins>
+      <plugin>
         <artifactId>maven-site-plugin</artifactId>
-
-
       </plugin>
       <plugin>
         <artifactId>maven-assembly-plugin</artifactId>
@@ -105,7 +106,8 @@
               <goal>single</goal>
             </goals>
             <configuration>
-              <descriptors>                <descriptor>${basedir}/src/assembly/ctl.xml</descriptor>
+              <descriptors>                
+                <descriptor>${basedir}/src/assembly/ctl-scripts.xml</descriptor>
                 <descriptor>${basedir}/src/assembly/aio.xml</descriptor>
                 <descriptor>${basedir}/src/assembly/deps.xml</descriptor>
               </descriptors>
@@ -161,7 +163,22 @@
         </plugin>
       </plugins>
     </pluginManagement>
-
+    
+    <resources>
+      <resource>
+        <directory>${basedir}/src/main/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+      <resource>
+        <directory>${basedir}/src/main/scripts</directory>
+        <targetPath>${ets-code}/${spec-version}</targetPath>
+      </resource>
+      <resource>
+        <directory>src/main/javadoc</directory>
+        <filtering>true</filtering>
+        <targetPath>doc/${ets-code}/${project.version}</targetPath>
+      </resource>
+    </resources>
     <testResources>
       <testResource>
         <directory>${basedir}/src/test/resources</directory>
