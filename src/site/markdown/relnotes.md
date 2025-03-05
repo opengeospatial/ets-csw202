@@ -1,5 +1,14 @@
 # CSW 2.0.2 Conformance Test Suite Release Notes
 
+## 1.19 (2025-03-05)
+
+Attention: Java 17 and Tomcat 10.1 are required.
+
+- [#38](https://github.com/opengeospatial/ets-csw202/issues/38) - Migrate test suite to TEAM Engine 6 (Java 17)
+- [#33](https://github.com/opengeospatial/ets-csw202/issues/33) - Enable REST API
+- [#37](https://github.com/opengeospatial/ets-csw202/issues/37) - Deployment to Central Maven Repository fails
+- [#36](https://github.com/opengeospatial/ets-csw202/pull/36) - Bump junit from 4.12 to 4.13.1
+
 ## 1.18 (2018-08-29)
 - [#23](https://github.com/opengeospatial/ets-csw202/issues/23) - Test csw:csw-2.0.2-GetCapabilities-tc1.1 fails if capabilities contains ExtendedCapabilities
 - [#21](https://github.com/opengeospatial/ets-csw202/issues/21) - A sequence of more than one item is not allowed as the first argument of compare()
