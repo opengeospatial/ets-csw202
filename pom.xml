@@ -9,7 +9,7 @@
 
   <modelVersion>4.0.0</modelVersion>
   <artifactId>ets-csw20</artifactId>
-  <version>1.19</version>
+  <version>1.20-SNAPSHOT</version>
 
   <name>Conformance Test Suite - CSW 2.0.2</name>
   <description>
@@ -33,7 +33,7 @@
     <url>https://github.com/opengeospatial/ets-csw202</url>
     <connection>scm:git:https://github.com/opengeospatial/ets-csw202.git</connection>
     <developerConnection>scm:git:git@github.com:opengeospatial/ets-csw202.git</developerConnection>
-    <tag>1.19</tag>
+    <tag>HEAD</tag>
   </scm>
   <issueManagement>
     <system>GitHub Issue Tracker</system>
